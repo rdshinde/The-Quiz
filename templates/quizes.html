@@ -39,6 +39,7 @@
           </nav>
         </header>
         <main class="main-content m-xl">
+          <div class="overlay modal__action hide"></div>
           <section class="quiz-card-container">
             <article class="card m--x-xl border-rounded-md shadow-lg">
               <div class="card__img-container">
@@ -58,9 +59,9 @@
                 </p>
               </div>
               <div class="card__footer p-x-md">
-                <a href="./question1.html" class="btn btn-default"
-                  >Take a Quiz</a
-                >
+                <button class="btn btn-default open-simple-modal">
+                  Take a Quiz
+                </button>
                 <a
                   href="https://www.imdb.com/title/tt3230854/"
                   class="btn btn-link"
@@ -88,9 +89,9 @@
                 </p>
               </div>
               <div class="card__footer p-x-md">
-                <a href="./question1.html" class="btn btn-default"
-                  >Take a Quiz</a
-                >
+                <button class="btn btn-default open-simple-modal">
+                  Take a Quiz
+                </button>
                 <a
                   href="https://www.imdb.com/title/tt3230854/"
                   class="btn btn-link"
@@ -98,6 +99,28 @@
                 >
               </div>
             </article>
+            <!-- Rules Modal Start-->
+            <div class="modal simple-modal shadow-lg border-rounded-sm hide">
+              <div class="modal__header">
+                <h3>Let's have a look at rules.</h3>
+              </div>
+              <img src="../assets/expanse.png" alt="" />
+              <div class="modal__body">
+                1. You have to solve 5 random questions. <br />
+                2. Each correct answer will be awarded with one point. <br />
+                3. Each wrong answer you will get -0.25 points. <br />
+                4. If you skip the question then no point will be awarded.
+                <br />
+                Good luck!
+              </div>
+
+              <div class="modal__footer">
+                <a href="./question1.html" class="btn btn-primary modal__action"
+                  >Start Quiz</a
+                >
+              </div>
+            </div>
+            <!-- Rules Modal End -->
           </section>
         </main>
         <footer class="footer-container">
@@ -106,23 +129,47 @@
               <a
                 class="btn"
                 href="https://www.linkedin.com/in/rishikesh-shinde-1211b5192/"
-                ><i class="fab fa-linkedin" aria-hidden="true"></i>
+                ><i class="fab fa-linkedin" ></i>
               </a>
             </li>
             <li>
               <a class="btn" href="https://github.com/rdshinde/Bermuda"
-                ><i class="fab fa-github" aria-hidden="true"></i
+                ><i class="fab fa-github" ></i
               ></a>
             </li>
             <li>
               <a class="btn" href="https://twitter.com/Rishike16406089"
-                ><i class="fab fa-twitter" aria-hidden="true"></i
+                ><i class="fab fa-twitter" ></i
               ></a>
             </li>
           </ul>
         </footer>
       </div>
     </div>
-    <link rel="stylesheet" href="https://bermuda-css.netlify.app/script.js" />
+    <!-- <script src="https://bermuda-css.netlify.app/script.js"></script> -->
+    <!-- Code For Modal -->
+    <script>
+      const overlay = document.querySelector(".overlay");
+      const modalAction = document.querySelectorAll(".modal__action");
+      const modal = document.querySelectorAll(".modal");
+      const openSimpleModal = document.querySelectorAll(".open-simple-modal");
+      console.log(openSimpleModal);
+      const simpleModal = document.querySelector(".simple-modal");
+
+      openSimpleModal.forEach((modal) => {
+        modal.addEventListener("click", () => {
+          simpleModal.classList.remove("hide");
+          overlay.classList.remove("hide");
+        });
+      });
+      modalAction.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          overlay.classList.add("hide");
+          modal.forEach((ele) => {
+            ele.classList.add("hide");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
