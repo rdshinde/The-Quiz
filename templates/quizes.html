@@ -4,13 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/fde0352739.js"
-      crossorigin="anonymous"
-    ></script>
     <link rel="stylesheet" href="https://bermuda-css.netlify.app/style.css" />
     <link rel="stylesheet" href="../style.css" />
-    <title>The Quiz</title>
+    <title>The Quiz | Quizes</title>
   </head>
   <body>
     <div class="root">
@@ -19,18 +15,22 @@
           <nav class="nav">
             <div class="nav__logo">
               <h2>
-                <a href="" class="text-offwhite"> The Quiz</a>
+                <a href="../index.html" class="text-offwhite"> The Quiz</a>
               </h2>
             </div>
             <ul class="nav__links">
-              <li><a class="btn btn-link active" href="">Home</a></li>
               <li>
-                <a class="btn btn-primary border-rounded-sm shadow-sm" href=""
+                <a class="btn btn-link" href="../index.html">Home</a>
+              </li>
+              <li>
+                <a
+                  class="btn btn-default-outline border-rounded-sm shadow-sm"
+                  href="#"
                   >Login</a
                 >
               </li>
               <li>
-                <a class="btn" href="">Leaderboard</a>
+                <a class="btn" href="#">Leaderboard</a>
               </li>
             </ul>
             <div class="nav__menu-btn hide">
@@ -93,7 +93,7 @@
                   Take a Quiz
                 </button>
                 <a
-                  href="https://www.imdb.com/title/tt3230854/"
+                  href="https://www.imdb.com/title/tt5232792/"
                   class="btn btn-link"
                   >Read More...</a
                 >
@@ -123,37 +123,35 @@
             <!-- Rules Modal End -->
           </section>
         </main>
-        <footer class="footer-container">
+        <footer class="footer-container m-t-xxl p-t-xxl">
           <ul class="footer__links">
             <li>
               <a
                 class="btn"
                 href="https://www.linkedin.com/in/rishikesh-shinde-1211b5192/"
-                ><i class="fab fa-linkedin" ></i>
+                ><i class="fab fa-linkedin"></i>
               </a>
             </li>
             <li>
               <a class="btn" href="https://github.com/rdshinde/Bermuda"
-                ><i class="fab fa-github" ></i
+                ><i class="fab fa-github"></i
               ></a>
             </li>
             <li>
               <a class="btn" href="https://twitter.com/Rishike16406089"
-                ><i class="fab fa-twitter" ></i
+                ><i class="fab fa-twitter"></i
               ></a>
             </li>
           </ul>
         </footer>
       </div>
     </div>
-    <!-- <script src="https://bermuda-css.netlify.app/script.js"></script> -->
     <!-- Code For Modal -->
     <script>
       const overlay = document.querySelector(".overlay");
       const modalAction = document.querySelectorAll(".modal__action");
       const modal = document.querySelectorAll(".modal");
       const openSimpleModal = document.querySelectorAll(".open-simple-modal");
-      console.log(openSimpleModal);
       const simpleModal = document.querySelector(".simple-modal");
 
       openSimpleModal.forEach((modal) => {
